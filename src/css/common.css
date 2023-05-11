@@ -16,3 +16,18 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.div-one-task {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-one-task {
+  width: 150px;
+  height: 50px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
