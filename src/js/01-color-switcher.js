@@ -4,7 +4,7 @@ const body = document.querySelector('body');
 const startEl = document.querySelector('[data-start]');
 const stopEl = document.querySelector('[data-stop]');
 
-let timer = null;
+let timer = 0;
 
 startEl.addEventListener('click', beginChangeColor);
 stopEl.addEventListener('click', finishColorChange);

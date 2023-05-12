@@ -16,7 +16,7 @@ img {
   display: block;
   max-width: 100%;
 }
-
+/* ---------------------task_1----------------- */
 .div-one-task {
   display: flex;
   justify-content: center;
@@ -30,4 +30,42 @@ img {
   border: none;
   cursor: pointer;
   font-size: 16px;
+}
+
+
+
+/* ------------------------------task_2------------------------- */
+
+#datetime-picker {
+  padding: 5px;
+  font-size: 16px;
+}
+
+button[data-start] {
+  padding: 10px 20px;
+  background-color: #000;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.timer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 300px;
+  margin-top: 20px;
+}
+
+.field {
+  text-align: center;
+}
+
+.value {
+  font-size: 44px;
+}
+
+.label {
+  font-size: 14px;
+  display: block;
+  margin-top: 3px;
 }
