@@ -26,13 +26,17 @@ function onSubmitForm(e) {
   let amount = Number(form.amount.value);
 
   for (let i = 0; i < amount; i++) {
-    createPromise(i, delay)
-      .then(({ position, delay }) => {
-        Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
-      })
-      .catch(({ position, delay }) => {
-        Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
-      });
-    delay += step;
+    if (delay <= 0 || step <= 0 || amount <= 0) {
+      return Notify.failure(`❌ Введіть значення більше 0`); 
+    } else {
+      createPromise(i, delay)
+        .then(({ position, delay }) => {
+          Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
+        })
+        .catch(({ position, delay }) => {
+          Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
+        });
+      delay += step;
+    }
   }
 }
